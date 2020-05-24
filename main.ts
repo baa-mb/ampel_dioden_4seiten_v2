@@ -35,28 +35,31 @@ input.onButtonPressed(Button.A, function () {
 })
 function init () {
     dioden_helligkeit = 512
-    zfakt = 3
     warte_lang = 5000 * zfakt
     warte_kurz = 2000 * zfakt
     warte_blink = 300 * zfakt
+    basic.showNumber(zfakt)
 }
 function alle_aus (aNum: number) {
     pins.analogWritePin(ampelseite[aNum]+0, 0)
 pins.analogWritePin(ampelseite[aNum]+1, 0)
 pins.analogWritePin(ampelseite[aNum]+2, 0)
 }
-let zfakt = 0
 let warte_blink = 0
 let warte_lang = 0
 let warte_kurz = 0
+let zfakt = 0
 let dioden_helligkeit = 0
 let aNum2 = 0
 basic.showIcon(IconNames.Heart)
 let ampelseite = [100, 112]
+zfakt = 3
 init()
 basic.forever(function () {
     rot(0)
     gelb(0)
     rot(1)
     gelb(1)
+    basic.pause(100)
+    init()
 })
