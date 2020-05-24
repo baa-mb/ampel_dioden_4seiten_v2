@@ -45,4 +45,5 @@ basic.forever(function () {
     rot(0)
     gelb(0)
     rot(1)
+    gelb(1)
 })
