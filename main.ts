@@ -44,11 +44,6 @@ function alle_aus (aNum: number) {
 pins.analogWritePin(ampelseite[aNum]+1, 0)
 pins.analogWritePin(ampelseite[aNum]+2, 0)
 }
-// music.play('b:30', microbit.pin8)
-// music.ringTone(Note.C,microbit.pin8)
-input.onButtonPressed(Button.B, function () {
-	
-})
 let warte_blink = 0
 let warte_lang = 0
 let warte_kurz = 0
@@ -57,7 +52,7 @@ let aNum2 = 0
 let dioden_helligkeit = 0
 basic.showIcon(IconNames.Heart)
 let ampelseite = [100, 112]
-zfakt = 3
+zfakt = 2
 init()
 basic.forever(function () {
     rot(0)
