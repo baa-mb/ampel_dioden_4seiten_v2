@@ -28,7 +28,7 @@ input.onButtonPressed(Button.A, function () {
     if (zfakt != 1) {
         zfakt = 1
     } else {
-        zfakt = 3
+        zfakt = 2
     }
     init()
 })
@@ -37,7 +37,7 @@ function init () {
     warte_lang = 5000 * zfakt
     warte_kurz = 2000 * zfakt
     warte_blink = 300 * zfakt
-    basic.showNumber(zfakt)
+    basic.showIcon(IconNames.Happy)
 }
 function alle_aus (aNum: number) {
     pins.analogWritePin(ampelseite[aNum]+0, 0)
